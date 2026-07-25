@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>DroneTech Solutions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="system">
+
+ <div class="drone drone-1"></div>
+ <div class="drone drone-2"></div>
+
+ <!--Header-->
+  <header class="header">
+    <div class="container header-inner">
+      <div class="logo-wrapper">
+        <img src="Images/Dronetechlogo.png" class="logo-img" alt="">
+        <span class="logo-text">DroneTech Solutions</span>
+      </div>
+
+      <nav class="nav-links">
+        <button class="nav-link" onclick="scrollToSection('services')">Services</button>
+        <button class="nav-link" onclick="scrollToSection('about')">About</button>
+        <button class="nav-link primary-nav" id="openModalHeader">Request a Quote</button>
+        <button class="theme-toggle" id="themeToggle">Theme</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <div class="hero-overlay"></div>
+    
+    <div class="container hero-content">
+      <div class="hero-content">
+        <div class="hero-pill">FAA Certified • Precision Aerial Services</div>
+
+        <h1 class="hero-title">Data‑Driven Drone Operations for Land, Water & Solar Assets</h1>
+
+        <p class="hero-subtitle">
+          From precision spraying and aquatic management to solar diagnostics and wildlife surveys,
+          DroneTech Solutions delivers professional, safe, and measurable results across Southeast Texas.
+        </p>
+
+        <div class="hero-actions">
+          <button class="btn btn-primary" id="openModalHero">Request a Quote</button>
+          <button class="btn btn-ghost" onclick="scrollToSection('services')">Explore Services</button>
+        </div>
+
+        <div class="hero-meta">
+          <span>Serving all of Southeast Texas</span>
+          <span class="dot"></span>
+          <span>DroneTech Solutions & SolarGuard Solutions</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE DASHBOARD -->
+  <section class="service-dashboard" id="services">
+    <div class="container">
+      <h2 class="dashboard-title">Our Services</h2>
+
+      <div class="dashboard-grid">
+
+        <!-- 1 — Wildlife -->
+        <div class="dashboard-card flip-card hover-glow">
+          <div class="flip-card-inner">
+
+            <div class="flip-card-front">
+              <h3>Wildlife & Ranch</h3>
+              <p class="card-front-tagline">Thermal aerial surveys for herd counts and wildlife detection.</p>
+              <div class="flip-image-single">
+                <img src="Images/21E8D7AC-6FB1-4366-B821-D8590F6A2CC5.jpeg" alt="">
+
+                <button class="card-more-btn" onclick="flipCard(this)">Find Out More →</button>
+              </div>
+            </div>
+
+            <div class="flip-card-back">
+              <h3>Wildlife & Ranch</h3>
+              <p>Accurate aerial counts, movement tracking, and fence‑line assessments. Provides clear insights for ranches, preserves, and rural properties without disturbing wildlife.</p>
+              <p class="starting-price">Starting at $450</p>
+
+              <div class="flip-images-back">
+                <img src="Images/099C2B82-F811-4C27-94BF-AECD8400B9E9.jpeg" alt="">
+                <img src="Images/Hogs.jpg" alt="Hogs">
+                <img src="Images/E50ECCE8-F74A-4379-ADD6-98B3CBFB5BD2.jpeg" alt="">
+              </div>
+
+              <button class="card-back-btn" onclick="flipCard(this)">← Back</button>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 2 — Aquatic -->
+        <div class="dashboard-card flip-card hover-glow">
+          <div class="flip-card-inner">
+
+            <div class="flip-card-front">
+              <h3>Aquatic Management</h3>
+              <p class="card-front-tagline">Identify and track invasive vegetation across ponds and lakes.</p>
+              <div class="flip-image-single">
+                <img src="Images/aquatic-poster.png" alt="">
+
+                <button class="card-more-btn" onclick="flipCard(this)">Find Out More →</button>
+              </div>
+            </div>
+
+            <div class="flip-card-back">
+              <h3>Aquatic Management</h3>
+              <p>Safe, efficient treatment of ponds, lakes, and waterways. Eliminates invasive vegetation and algae using controlled, data‑driven application — no boats required.</p>
+              <p class="starting-price">Starting at $400</p>
+
+              <div class="flip-images-back">
+                <img src="Images/Alligator.png" alt="">
+                <img src="Images/Water Hyacinth.png" alt="">
+                <img src="Images/Salvinia.png" alt="">
+              </div>
+
+              <button class="card-back-btn" onclick="flipCard(this)">← Back</button>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 3 — Solar -->
+        <div class="dashboard-card flip-card hover-glow">
+          <div class="flip-card-inner">
+
+            <div class="flip-card-front">
+              <h3>Solar Diagnostics</h3>
+              <p class="card-front-tagline">Thermal inspections that pinpoint hotspots and failing modules.</p>
+              <div class="flip-image-single">
+                <img src="Images/gallery8.jpeg" alt="">
+
+                <button class="card-more-btn" onclick="flipCard(this)">Find Out More →</button>
+              </div>
+            </div>
+
+            <div class="flip-card-back">
+              <h3>Solar Diagnostics</h3>
+              <p>High‑resolution thermal scans detect hotspots, micro‑cracks, shading issues, and failing cells. Delivered with clear reports and actionable recommendations.</p>
+              <p class="starting-price">Starting at $550</p>
+
+              <div class="flip-images-back">
+                <img src="Images/gallery7.png" alt="">
+                <img src="Images/gallery2.jpeg" alt="">
+                <img src="Images/D20EF062-1FBD-4EB9-9CE9-8FB3E8498011.jpeg" alt="">
+              </div>
+
+              <button class="card-back-btn" onclick="flipCard(this)">← Back</button>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 4 — LOGO -->
+        <div class="dashboard-logo">
+          <img src="Images/Dronetechlogo.png" alt="" class="logo-main-img">
+        </div>
+
+        <!-- 5 — Spraying -->
+        <div class="dashboard-card flip-card hover-glow">
+          <div class="flip-card-inner">
+            
+            <div class="flip-card-front">
+              <h3>Precision Spraying</h3>
+              <p class="card-front-tagline">GPS-guided herbicide and fungicide application.</p>
+              <div class="flip-image-single">
+                <img src="Images/gallery1.jpeg" alt="">
+
+                <button class="card-more-btn" onclick="flipCard(this)">Find Out More →</button>
+              </div>
+            </div>
+
+            <div class="flip-card-back">
+              <h3>Precision Spraying</h3>
+              <p>Targeted, GPS‑guided application for pastures, fence lines, and invasive species. Accurate coverage, reduced waste, and consistent results for ranches and land managers.</p>
+
+              <p id="openModalSprayingEstimate" class="quote-link">Contact us for an estimate!</p>
+
+              <div class="flip-images-back">
+                <img src="Images/gallery6.jpeg" alt="">
+                <img src="Images/gallery6.png" alt="">
+                <img src="Images/hero.jpg.jpeg" alt="">
+              </div>
+
+              <button class="card-back-btn" onclick="flipCard(this)">← Back</button>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 6 — Multispectral -->
+        <div class="dashboard-card flip-card hover-glow">
+          <div class="flip-card-inner">
+            
+            <div class="flip-card-front">
+              <h3>Multispectral Imaging</h3>
+              <p class="card-front-tagline">NDVI and multispectral data revealing crop stress early.</p>
+              <div class="flip-image-single">
+                <img src="Images/IMG_3685.png" alt="">
+
+                <button class="card-more-btn" onclick="flipCard(this)">Find Out More →</button>
+              </div>
+            </div>
+
+            <div class="flip-card-back">
+              <h3>Multispectral Imaging</h3>
+              <p>Advanced crop‑health analysis using NDVI and multispectral sensors. Identifies stress, disease, pests, and nutrient issues early for targeted, efficient treatment.</p>
+
+              <p id="openModalMultispectral" class="quote-link">Contact us for an estimate!</p>
+              
+              <div class="flip-images-back">
+                <img src="Images/IMG_4223.jpeg" alt="">
+                <img src="Images/IMG_4149.png" alt="">
+                <img src="Images/IMG_4135.png" alt="">
+              </div>
+
+              <button class="card-back-btn" onclick="flipCard(this)">← Back</button>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section section-alt" id="about">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-kicker">Meet the Team</div>
+        <h2 class="section-title">Two operators. One mission.</h2>
+        <p class="section-subtitle">DroneTech Solutions provides professional, FAA‑certified aerial services across Southeast Texas. Our mission is to deliver safe, measurable, and data‑driven results for landowners, ranchers, solar operators, property managers, and environmental agencies.
+We combine advanced drone technology with real‑world field expertise to solve problems faster, safer, and more accurately than traditional methods.
+
+Our operations are built on precision, compliance, and a commitment to environmental responsibility. Every mission is planned with safety protocols, flight‑path optimization, and clear deliverables so clients receive actionable insights — not just images..</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-card">
+          <div class="about-headshot-wrapper">
+            <img src="Images/IMG_1343.jpeg" class="about-headshot-img" alt="">
+          </div>
+          <div class="about-name">Co-Founder</div>
+          <p class="about-text">Ronnie brings decades of hands‑on experience across agriculture, public service, and field operations. His background includes managing large‑acreage properties, coordinating land‑management programs, and leading teams in high‑stakes outdoor environments.
+At DroneTech Solutions, Ronnie oversees mission planning, safety compliance, and precision‑application operations. His deep understanding of land, water, and environmental conditions allows him to translate client needs into accurate, data‑driven aerial strategies.
+Ronnie is known for his calm leadership style, meticulous attention to detail, and commitment to delivering results that are both measurable and environmentally responsible.
+
+Specialties:
+
+Precision spraying & land management
+
+Aquatic vegetation control
+
+Large‑property surveying
+
+On‑site operations & logistics
+
+FAA Part 107 certified flight operations</p>
+        </div>
+
+        <div class="about-card">
+          <div class="about-headshot-wrapper">
+            <img src="Images/Jake.jpg" class="about-headshot-img" alt="">
+          </div>
+          <div class="about-name">Co-Founder</div>
+          <p class="about-text">Jake’s background spans emergency response, technical operations, and advanced drone deployment in challenging environments. He has extensive experience coordinating field teams, managing safety protocols, and executing missions requiring precision and situational awareness.
+At DroneTech Solutions, Jake leads thermal imaging, solar diagnostics, and inspection‑based missions. His ability to interpret aerial data, identify structural or environmental issues, and deliver clear, actionable insights makes him a trusted partner for ranchers, solar operators, and commercial clients across Southeast Texas.
+Jake is recognized for his technical expertise, strong communication skills, and dedication to long‑term client relationships.
+
+Specialties:
+
+Thermal imaging & solar diagnostics
+
+Wildlife & ranch surveying
+
+Roof & structural inspections
+
+Emergency‑response flight operations
+
+FAA Part 107 certified flight operations</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <img src="images/Dronetechlogo.png" class="footer-logo" alt="">
+        <div class="footer-brand">DroneTech Solutions</div>
+        <p class="footer-desc">Professional drone operations for land, water, and solar assets.</p>
+      </div>
+
+      <div>
+        <div class="footer-heading">Navigation</div>
+        <div class="footer-nav">
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-heading">Contact</div>
+        <p class="footer-text">Round Rock, TX</p>
+        <p class="footer-text">info@dronetech.com</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">© 2026 DroneTech Solutions</div>
+  </footer>
+
+  <!-- FLOATING CONTACT BUTTON -->
+  <button class="floating-contact" id="floatingContactBtn">Request a Quote</button>
+
+  <!-- MODAL -->
+  <div class="modal-backdrop" id="modalBackdrop">
+    <div class="modal">
+  <button class="modal-close" onclick="closeModal()">×</button>
+
+  <h2>Request a Quote</h2>
+
+  <!-- NAME -->
+  <div class="modal-field">
+    <label for="quote-name">Name</label>
+    <input type="text" id="quote-name" name="name" placeholder="Your name">
+  </div>
+
+  <!-- EMAIL -->
+  <div class="modal-field">
+    <label for="quote-email">Email</label>
+    <input type="email" id="quote-email" name="email" placeholder="you@example.com">
+  </div>
+
+  <!-- PHONE -->
+  <div class="modal-field">
+    <label for="quote-phone">Phone Number</label>
+    <input type="tel" id="quote-phone" name="phone" placeholder="(555) 123‑4567">
+  </div>
+
+  <!-- SERVICE -->
+  <div class="modal-field">
+    <label for="quote-service">Service</label>
+    <select id="quote-service" name="service">
+      <option value="">Select a service</option>
+      <option value="spraying">Precision Spraying</option>
+      <option value="multispectral">Multispectral Imaging</option>
+      <option value="mapping">Mapping & Surveying</option>
+      <option value="inspection">Inspection & Monitoring</option>
+      <option value="solar">SolarGuard Solutions</option>
+    </select>
+  </div>
+
+  <!-- DESCRIPTION -->
+  <div class="modal-field">
+    <label for="quote-description">Description of Services Needed</label>
+    <textarea id="quote-description" name="description" rows="4" placeholder="Tell us what you need..."></textarea>
+  </div>
+
+  <button class="btn-full">Submit Request</button>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
