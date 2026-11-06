@@ -4,19 +4,22 @@
   <meta charset="UTF-8" />
   <title>DroneTech Solutions</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="FAA Part 107 certified drone services across Southeast Texas: wildlife and ranch surveys, aquatic weed management, solar diagnostics, and precision agriculture." />
+  <link rel="icon" href="Images/Dronetechlogo.png" />
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
- <div class="drone drone-1"></div>
- <div class="drone drone-2"></div>
+ <!-- DRONES (animated in styles.css) -->
+ <div class="drone drone-1" aria-hidden="true"></div>
+ <div class="drone drone-2" aria-hidden="true"></div>
 
  <!--Header-->
   <header class="header">
     <div class="container header-inner">
       <div class="logo-wrapper">
-        <img src="Images/Dronetechlogo.png" class="logo-img" alt="">
+        <img src="Images/Dronetechlogo.png" class="logo-img" alt="DroneTech Solutions logo">
         <span class="logo-text">DroneTech Solutions</span>
       </div>
 
@@ -24,7 +27,7 @@
         <button class="nav-link" onclick="scrollToSection('services')">Services</button>
         <button class="nav-link" onclick="scrollToSection('about')">About</button>
         <button class="nav-link primary-nav" id="openModalHeader">Request a Quote</button>
-        <button class="theme-toggle" id="themeToggle">Theme</button>
+        <button class="theme-toggle" id="themeToggle" aria-label="Switch to light theme">☀️ Light</button>
       </nav>
     </div>
   </header>
@@ -34,7 +37,7 @@
 
     <div class="hero-overlay"></div>
     
-    <div class="container hero-content">
+    <div class="container">
       <div class="hero-content">
         <div class="hero-pill">FAA Certified • Precision Aerial Services</div>
 
@@ -74,7 +77,7 @@
               <h3>Wildlife & Ranch</h3>
               <p class="card-front-tagline">Thermal aerial surveys for herd counts and wildlife detection.</p>
               <div class="flip-image-single">
-                <img src="Images/21E8D7AC-6FB1-4366-B821-D8590F6A2CC5.jpeg" alt="">
+                <img src="Images/21E8D7AC-6FB1-4366-B821-D8590F6A2CC5.jpeg" alt="Cattle herd in a pasture">
 
                 <button class="card-more-btn" onclick="flipCard(this)">Find Out More →</button>
               </div>
@@ -91,7 +94,10 @@
                 <img src="Images/E50ECCE8-F74A-4379-ADD6-98B3CBFB5BD2.jpeg" alt="">
               </div>
 
-              <button class="card-back-btn" onclick="flipCard(this)">← Back</button>
+              <div class="card-back-actions">
+                <button class="btn-quote" data-service-quote>Get a Quote</button>
+                <button class="card-back-btn" onclick="flipCard(this)">← Back</button>
+              </div>
             </div>
 
           </div>
@@ -105,7 +111,7 @@
               <h3>Aquatic Management</h3>
               <p class="card-front-tagline">Targeted aquatic weed control and lake management solutions.</p>
               <div class="flip-image-single">
-                <img src="Images/aquatic-front.jpg" alt="Aquatic Management Drone">
+                <img src="Images/Water Hyacinth.png" alt="Water hyacinth covering a pond">
                 <button class="card-more-btn" onclick="flipCard(this)">Find Out More →</button>
               </div>
             </div>
@@ -113,14 +119,17 @@
             <div class="flip-card-back">
               <h3>Aquatic Management</h3>
               <p>Precision liquid spraying for invasive aquatic vegetation across lakes, retention ponds, and waterways. Highly effective treatment with minimal environmental runoff.</p>
-              <p class="starting-price">Starting at $500</p>
+              <p class="starting-price">Starting at $400</p>
 
               <div class="flip-images-back">
-                <img src="Images/aquatic-1.jpg" alt="Water Treatment">
-                <img src="Images/aquatic-2.jpg" alt="Pond Vegetation Spraying">
+                <img src="Images/Salvinia.png" alt="Giant salvinia">
+                <img src="Images/Hydrilla.png" alt="Hydrilla">
               </div>
 
-              <button class="card-back-btn" onclick="flipCard(this)">← Back</button>
+              <div class="card-back-actions">
+                <button class="btn-quote" data-service-quote>Get a Quote</button>
+                <button class="card-back-btn" onclick="flipCard(this)">← Back</button>
+              </div>
             </div>
 
           </div>
@@ -134,7 +143,7 @@
               <h3>Solar Diagnostics</h3>
               <p class="card-front-tagline">Thermal inspection and cleaning for maximum PV efficiency.</p>
               <div class="flip-image-single">
-                <img src="Images/solar-front.jpg" alt="Solar Panel Thermal Survey">
+                <img src="Images/gallery2.jpeg" alt="Drone over a solar array">
                 <button class="card-more-btn" onclick="flipCard(this)">Find Out More →</button>
               </div>
             </div>
@@ -142,48 +151,84 @@
             <div class="flip-card-back">
               <h3>Solar Diagnostics</h3>
               <p>Identify hotspot defects, cell failures, and debris buildup using high-resolution radiometric thermal cameras. Includes detailed health reports and optional aerial washing.</p>
-              <p class="starting-price">Starting at $350</p>
+              <p class="starting-price">Starting at $550</p>
 
               <div class="flip-images-back">
-                <img src="Images/solar-1.jpg" alt="Thermal Inspection">
-                <img src="Images/solar-2.jpg" alt="Solar Cleaning Drone">
+                <img src="Images/gallery7.png" alt="Thermal image showing panel hotspots">
+                <img src="Images/D20EF062-1FBD-4EB9-9CE9-8FB3E8498011.jpeg" alt="Solar panel cleaning">
               </div>
 
-              <button class="card-back-btn" onclick="flipCard(this)">← Back</button>
+              <div class="card-back-actions">
+                <button class="btn-quote" data-service-quote>Get a Quote</button>
+                <button class="card-back-btn" onclick="flipCard(this)">← Back</button>
+              </div>
             </div>
 
           </div>
         </div>
 
-        <!-- 4 — Precision Agriculture -->
+        <!-- 4 — Precision Spraying -->
         <div class="dashboard-card flip-card hover-glow">
           <div class="flip-card-inner">
 
             <div class="flip-card-front">
-              <h3>Precision Agriculture</h3>
-              <p class="card-front-tagline">Aerial crop spraying, mapping, and field health analytics.</p>
+              <h3>Precision Spraying</h3>
+              <p class="card-front-tagline">Precision herbicide, pesticide, and fertilizer application by drone.</p>
               <div class="flip-image-single">
-                <img src="Images/agri-front.jpg" alt="Agriculture Spray Drone">
+                <img src="Images/gallery1.jpeg" alt="Spray drone over a crop field">
                 <button class="card-more-btn" onclick="flipCard(this)">Find Out More →</button>
               </div>
             </div>
 
             <div class="flip-card-back">
-              <h3>Precision Agriculture</h3>
-              <p>Variable-rate pesticide and fertilizer application paired with multispectral crop stress mapping. Save input costs and optimize yields with pinpoint field coverage.</p>
-              <p class="starting-price">Starting at $12/acre</p>
+              <h3>Precision Spraying</h3>
+              <p>Variable-rate herbicide, pesticide, and fertilizer application with pinpoint field coverage and zero crop compaction. Pricing depends on acreage and product, so request a quote for your property.</p>
 
               <div class="flip-images-back">
-                <img src="Images/agri-1.jpg" alt="Crop Spraying">
-                <img src="Images/agri-2.jpg" alt="Field Mapping">
+                <img src="Images/precision-ag.png" alt="Crop spraying">
+                <img src="Images/gallery6.png" alt="Drone flying over a crop field">
               </div>
 
-              <button class="card-back-btn" onclick="flipCard(this)">← Back</button>
+              <div class="card-back-actions">
+                <button class="btn-quote" data-service-quote>Get a Quote</button>
+                <button class="card-back-btn" onclick="flipCard(this)">← Back</button>
+              </div>
             </div>
 
           </div>
         </div>
 
+
+        <!-- 5 — Multispectral Imaging -->
+        <div class="dashboard-card flip-card hover-glow">
+          <div class="flip-card-inner">
+
+            <div class="flip-card-front">
+              <h3>Multispectral Imaging</h3>
+              <p class="card-front-tagline">Crop health mapping that spots problems before you can see them.</p>
+              <div class="flip-image-single">
+                <img src="Images/IMG_4223.jpeg" alt="Color-coded NDVI crop health map">
+                <button class="card-more-btn" onclick="flipCard(this)">Find Out More →</button>
+              </div>
+            </div>
+
+            <div class="flip-card-back">
+              <h3>Multispectral Imaging</h3>
+              <p>Specialized cameras capture near-infrared light invisible to the human eye, revealing disease, drought, or nutrient stress days or weeks before it shows. Imagery is stitched into a color-coded NDVI map so you can target water, fertilizer, or pesticides only where needed.</p>
+
+              <div class="flip-images-back">
+                <img src="Images/IMG_4135.png" alt="Sample multispectral health report">
+                <img src="Images/gallery6.jpeg" alt="Drone and field sensor collecting crop data">
+              </div>
+
+              <div class="card-back-actions">
+                <button class="btn-quote" data-service-quote>Get a Quote</button>
+                <button class="card-back-btn" onclick="flipCard(this)">← Back</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -210,6 +255,24 @@
           </div>
         </div>
       </div>
+
+        <div class="team-grid">
+          <article class="team-card">
+            <img class="team-photo" src="Images/IMG_1343.jpeg" alt="Ronnie Denton">
+            <h3>Ronnie Denton</h3>
+            <p class="team-role">FAA Certified UAS Pilot</p>
+            <p>Ronnie specializes in agricultural spraying, aquatic vegetation management, and solar diagnostics, bringing precision, safety, and consistency to every operation.</p>
+            <a class="team-email" href="mailto:rdentondts@gmail.com">rdentondts@gmail.com</a>
+          </article>
+
+          <article class="team-card">
+            <img class="team-photo" src="Images/Jake.jpg" alt="Jake Messer">
+            <h3>Jake Messer</h3>
+            <p class="team-role">FAA Certified UAS Pilot</p>
+            <p>Jake leads thermal imaging, wildlife reconnaissance, and infrastructure inspections. His technical background ensures accurate data capture and actionable reporting.</p>
+            <a class="team-email" href="mailto:jmesser@gmail.com">jmesser@gmail.com</a>
+          </article>
+        </div>
     </div>
   </section>
 
@@ -223,6 +286,9 @@
       <div class="footer-links">
         <button class="footer-link" onclick="scrollToSection('services')">Services</button>
         <button class="footer-link" onclick="scrollToSection('about')">About</button>
+        <!-- FACEBOOK: paste the DTS page URL into href, then remove the comment markers
+        <a class="footer-link" href="https://www.facebook.com/YOUR-PAGE" target="_blank" rel="noopener">Facebook</a>
+        -->
       </div>
     </div>
   </footer>
@@ -230,7 +296,7 @@
   <!-- REQUEST QUOTE MODAL -->
   <div class="modal-overlay" id="quoteModal">
     <div class="modal-content">
-      <button class="modal-close" id="closeModal">&times;</button>
+      <button class="modal-close" id="closeModal" aria-label="Close">&times;</button>
       <h2>Request a Free Quote</h2>
       <p>Fill out the details below and we’ll get back to you promptly.</p>
       
@@ -246,13 +312,19 @@
         </div>
 
         <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="(555) 555-5555">
+        </div>
+
+        <div class="form-group">
           <label for="service">Service Needed</label>
           <select id="service" name="service" required>
             <option value="" disabled selected>Select a service</option>
             <option value="wildlife">Wildlife & Ranch</option>
             <option value="aquatic">Aquatic Management</option>
             <option value="solar">Solar Diagnostics</option>
-            <option value="agri">Precision Agriculture</option>
+            <option value="spraying">Precision Spraying</option>
+            <option value="multispectral">Multispectral Imaging</option>
           </select>
         </div>
 
@@ -261,7 +333,8 @@
           <textarea id="message" name="message" rows="4" placeholder="Describe your property size, goals, or specific timeline..."></textarea>
         </div>
 
-        <button type="submit" class="btn btn-primary btn-full">Submit Request</button>
+        <button type="submit" class="btn btn-primary btn-full" id="submitQuote">Submit Request</button>
+        <p class="form-status" id="formStatus" role="status"></p>
       </form>
     </div>
   </div>
@@ -269,3 +342,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+
